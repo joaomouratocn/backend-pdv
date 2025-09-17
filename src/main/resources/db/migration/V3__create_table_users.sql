@@ -3,7 +3,7 @@ CREATE TABLE users(
     name VARCHAR(100) NOT NULL,
     username VARCHAR(50) NOT NULL UNIQUE,
     password_hash TEXT NOT NULL,
-    role_id INT NOT NULL REFERENCES role(id),
+    role_id INT NOT NULL REFERENCES roles(id),
     active BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT NOW()
 );
