@@ -1,5 +1,5 @@
 CREATE TABLE products(
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
     description TEXT,
     barcode VARCHAR(100) UNIQUE,
@@ -7,6 +7,7 @@ CREATE TABLE products(
     sale_price DECIMAL(10,2) NOT NULL DEFAULT 0,
     stock_quantity DECIMAL(10,2) NOT NULL DEFAULT 0,
     min_stock DECIMAL(10,2) DEFAULT 0,
-    created_at TIMESTAMP DEFAULT NOW(),
-    updated_at TIMESTAMP DEFAULT NOW()
+    enable BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
 );

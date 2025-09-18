@@ -1,4 +1,4 @@
-package br.com.arthivia.backend_pdv.models.dtos;
+package br.com.arthivia.backend_pdv.infra;
 
 public record SuccessResponse(
         String message
